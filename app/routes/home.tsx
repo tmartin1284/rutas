@@ -11,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      <h1>pagina wesss de tomas</h1>
+      <h1 style={{ background: "pink" }}>pagina wesss de tomas</h1>
     </>
   );
 }

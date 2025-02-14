@@ -13,3 +13,7 @@ body {
     color-scheme: dark;
   }
 }
+.active {
+  font-weight: bold;
+  color: blue;
+}

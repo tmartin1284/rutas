@@ -8,7 +8,8 @@ import {
 export default [
   //index("routes/home.tsx"),
   route("tomas", "routes/tomas.tsx"),
-  // route("post/:id", "routes/post.tsx"),
+  route("post/:id", "routes/post.tsx"),
+  route("cargar/:name", "routes/cargar.tsx"),
   //   route("info", "routes/Info.tsx", [
   //     route("barra", "routes/Dashboard.tsx", [
   //       route("nieta", "routes/Nieta.tsx"),
