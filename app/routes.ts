@@ -3,30 +3,32 @@ import {
   index,
   route,
   layout,
+  prefix,
 } from "@react-router/dev/routes";
 
 export default [
   //index("routes/home.tsx"),
-  route("tomas", "routes/tomas.tsx"),
-  route("post/:id", "routes/post.tsx"),
-  route("cargar/:name", "routes/cargar.tsx"),
-  //   route("info", "routes/Info.tsx", [
-  //     route("barra", "routes/Dashboard.tsx", [
-  //       route("nieta", "routes/Nieta.tsx"),
+  route("tomas", "routes/datos/tomas.tsx"),
+  route("post/:id", "routes/datos/post.tsx"),
+  route("pokemons/:name", "routes/datos/Pokemons.tsx"),
+
+  //ejemplo usando un prefijo. LO comento porque entonces no tiran los enlaces internos
+  //debajo está el mismo ejemplo, sin el prefijo
+  // layout("routes/anidados/Info.tsx", [
+  //   index("routes/anidados/home.tsx"),
+  //   ...prefix("manolo", [
+  //     route("barra", "routes/anidados/Dashboard.tsx", [
+  //       route("nieta", "routes/anidados/Nieta.tsx"),
   //     ]),
-  //     route("cuartos", "routes/Finanzas.tsx"),
+  //     route("cuartos", "routes/anidados/Finanzas.tsx"),
   //   ]),
+  // ]),
 
-  //     layout("routes/Dashboard.tsx", [
-  //       route("vacineo", "routes/Info.tsx"),
-  //       route("monises", "routes/Finanzas.tsx"),
-  //     ]),
-
-  layout("routes/Info.tsx", [
-    index("routes/home.tsx"),
-    route("barra", "routes/Dashboard.tsx", [
-      route("nieta", "routes/Nieta.tsx"),
+  layout("routes/anidados/Info.tsx", [
+    index("routes/anidados/home.tsx"),
+    route("barra", "routes/anidados/Dashboard.tsx", [
+      route("nieta", "routes/anidados/Nieta.tsx"),
     ]),
-    route("cuartos", "routes/Finanzas.tsx"),
+    route("cuartos", "routes/anidados/Finanzas.tsx"),
   ]),
 ] satisfies RouteConfig;

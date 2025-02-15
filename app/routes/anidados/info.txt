@@ -1,0 +1,3 @@
+En esta carpeta están los componentes que nos permiten explicar la anidación
+en react router
+Además, los uso para poner ejemplos de enlaces de navegación (no lo hemos visto aun

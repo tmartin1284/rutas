@@ -1,9 +1,9 @@
-import { Form } from "react-router";
-import type { Route } from "./+types/post";
+import { Form, useLoaderData } from "react-router";
+import type { Route } from "../+types/post";
 import manolo from "./manolo2.jpg";
 import { useSubmit, useFetcher } from "react-router";
 
-export async function loader({ params }: Route.LoaderArgs) {
+export async function clientLoader({ params }: Route.LoaderArgs) {
   // de aqui sacamos el parametro que se le ha pasado a la ruta
   const id = params.id;
   return { id };
@@ -13,9 +13,11 @@ export async function action({ request }: Route.ActionArgs) {
   //OJO. Usamos actionArgs, porque estamos en el servidor.
   // si queremos que se cargue en el cliente, usamos clientActionArgs
   //cosass
+  const formData = await request.formData();
 }
 
 export default function Post({ loaderData }: Route.ComponentProps) {
+  const datos: number = useLoaderData();
   return (
     <>
       <h1>pagina web de tomas</h1>
