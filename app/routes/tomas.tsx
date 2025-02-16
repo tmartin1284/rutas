@@ -1,4 +1,4 @@
-import type { Route } from "../+types/home";
+import type { Route } from "../../.react-router/types/app/routes/datos/+types/CServ.ts";
 import manolo from "./manolo.jpg";
 import { useActionData } from "react-router";
 

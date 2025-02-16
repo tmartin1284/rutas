@@ -1,5 +1,5 @@
-import type { Route } from "../+types/post";
-import type { Pokemon } from "../../types/interfaces";
+import type { Route } from "./+types/CServ.js";
+import type { Pokemon } from "../../types/interfaces.js";
 import { useLoaderData, Form, useActionData } from "react-router";
 import { useSubmit, useFetcher, redirect } from "react-router";
 
