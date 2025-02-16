@@ -19,7 +19,7 @@ export default [
   route("actclient/:name", "routes/datos/ActionsClient.tsx"),
   route("submit/:name", "routes/datos/Submit.tsx"),
   route("fetcher/:name", "routes/datos/fetcher.tsx"),
-  route("act/:id", "routes/datos/act.tsx"),
+  route("act/:id/act", "routes/datos/act.tsx"),
 
   //ejemplo usando un prefijo. LO comento porque entonces no tiran los enlaces internos
   //debajo está el mismo ejemplo, sin el prefijo
